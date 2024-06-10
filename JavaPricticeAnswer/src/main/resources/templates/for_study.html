@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>for文の練習</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+	
+	<main>
+		<h3>問題.</h3>
+		<p>ForTrainingController.javaファイルの該当箇所を書き換えてね！</p>
+		<p>1から、自分の入力した数字までが1ずつ表示されていれば正解！</p>
+
+		<div style="padding: 20px;border: 1px solid black;">
+			<h3>ここに数字を入力して、「答え合わせ」を押してね！</h3>
+			<form th:action="@{/for_study_answer}" th:object="${for_answer}" method="post">
+				<input type="number" name="for_answer" value="${for_answer}">
+				<input type="submit" value="答え合わせ">
+			</form>
+		</div>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+	
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

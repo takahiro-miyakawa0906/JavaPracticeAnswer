@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Updateの練習</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>問題.</h3>
+		<p>DeleteTrainingController.javaファイルの該当箇所を書き換えてね！</p>
+		<p>deamonが2つ存在している！</p>
+		<p>ひとつ消したい！</p>
+		<p>deamonの行の削除ボタンを押して、「deamon」が1つになっていれば正解！</p>
+
+		<table border="1" style="border-collapse: collapse;margin: 40px auto;">
+			<thead>
+				<tr>
+					<th>名前</th>
+					<th>敵か味方か</th>
+				</tr>
+			</thead>
+			<tbody class="m_table-contents">
+				<tr th:each="characters : ${characterForm}">
+					<form th:action="@{/delete_study_answer/{id}(id=*{characters.id})}">
+						<td align="center" th:text="*{characters.id}"></td>
+						<td align="center" th:text="*{characters.name}"></td>
+						<td align="center" th:text="*{characters.enemy_or_team}"></td>
+						<td>
+							<input type="submit" th:value="削除する">
+						</td>
+					</form>
+				</tr>
+			</tbody>
+		</table>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

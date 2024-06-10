@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>登録処理の練習</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>問題.</h3>
+		<p>RegisterTrainingController.javaファイルの該当箇所を書き換えてね！</p>
+		<p>以下の項目を入力して答え合わせボタンを押して、</p>
+		<p>入力したデータが入っていれば正解！！</p>
+
+		<div style="border: 1px solid black;padding: 20px;">
+			<h3>以下の2つを入力して、「答え合わせ」を押してね！</h3>
+			<form th:action="@{/register_study_answer}" th:object="${characterForm}" method="post">
+				<table style="margin:40px auto;">
+					<tr>
+						<th>名前</th>
+						<td>
+							<input type="text" name="name" required />
+						</td>
+					</tr>
+
+					<tr>
+						<th>敵か味方か</th>
+						<th>
+							<label>
+								<input type="radio" name="enemy_flg" value="0" />
+								<span>味方</span>
+							</label>
+
+							<label>
+								<input type="radio" name="enemy_flg" value="1" />
+								<span>敵</span>
+							</label>
+						</th>
+					</tr>
+				</table>
+				<input type="submit" value="答え合わせ">
+			</form>
+		</div>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

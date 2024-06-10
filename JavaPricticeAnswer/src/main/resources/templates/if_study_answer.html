@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>if文の練習の答え合わせ</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>3の倍数を入力したら、「３の倍数です！」、</h3>
+		<h3>5の倍数を入力したら、「５の倍数です！」、</h3>
+		<h3>それ以外を入力したら、「３の倍数でも、５の倍数でもありません！」、</h3>
+		<h3>が表示されていれば正解！！</h3>
+		<div style="border: 1px solid black;">
+			<h1 th:text="${if_training}"></h1>
+		</div>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+	
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

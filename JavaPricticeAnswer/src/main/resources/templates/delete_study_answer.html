@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>deleteの答え合わせ</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>deamonが1つになっていれば正解！！</h3>
+		<table border="1" style="border-collapse: collapse; margin: 60px auto;">
+			<thead>
+				<tr>
+					<th>名前</th>
+					<th>敵か味方か</th>
+				</tr>
+			</thead>
+			<tbody class="m_table-contents">
+				<tr th:each="characters : ${characterForm}">
+					<td align="center" th:text="*{characters.name}"></td>
+					<td align="center" th:text="*{characters.enemy_or_team}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

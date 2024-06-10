@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>更新処理の練習2</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>問題.</h3>
+		<p>heroが敵に寝返ってしまった！</p>
+		<p>UpdateTrainingController.javaファイルの該当箇所を書き換えてね！</p>
+		<p>heroの名前をdeamon、敵か味方かの選択を「敵」に変更して、</p>
+		<p>「答え合わせ」を押してね！</p>
+		<p>heroがdeamonで、敵に変更されていたら正解！！</p>
+
+		<div style="border: 1px solid black;padding: 20px;">
+			<h3>名前を「deamon」、敵か味方かを「敵」に変更して、<br>「答え合わせ」を押してね！</h3>
+			<form th:object="${characterForm}" th:action="@{/update_study_answer}" method="post">
+				<input type="hidden" name="id" th:field="*{id}" />
+				<table style="border-collapse: collapse; margin:20px auto;">
+					<tr>
+						<th>名前</th>
+						<td>
+							<input type="text" name="name" th:field="*{name}" />
+						</td>
+					</tr>
+
+
+					<tr>
+						<th>敵か味方か</th>
+						<td>
+							<label>
+								<input type="radio" name="enemy_flg" value="0" th:field="*{enemy_flg}" />
+								<span>味方</span>
+							</label>
+
+							<label>
+								<input type="radio" name="enemy_flg" value="1" th:field="*{enemy_flg}" />
+								<span>敵</span>
+							</label>
+						</td>
+					</tr>
+				</table>
+				<span>
+					<input type="submit" value="答え合わせ">
+				</span>
+			</form>
+		</div>
+
+		<button onclick="location.href='../index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

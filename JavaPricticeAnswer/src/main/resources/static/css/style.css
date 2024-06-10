@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+main{
+	text-align: center;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main div{
+	margin:10vh 0 20vh 0;
+}
+
+h3{
+	text-align: left;
+}
+
+main div h3 {
+	text-align: center;
+}

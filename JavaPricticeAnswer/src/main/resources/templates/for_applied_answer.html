@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>for文の応用の答え合わせ</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header>
+
+	<main>
+		<h3>キャラクターの一覧が表示されていれば正解！！</p>
+		<div style="border: 1px solid black;font-weight: bold;">
+			<table>
+				<tbody>
+					<tr th:each="characters : ${characterList}">
+						<td align="center" th:text="*{characters.name}"></td>
+						<td align="center" th:text="*{characters.enemy_or_team}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer>
+</body>
+
+</html>

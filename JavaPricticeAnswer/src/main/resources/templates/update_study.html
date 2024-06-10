@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>更新処理の練習</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>問題.</h3>
+		<p>heroが敵に寝返ってしまった！</p>
+		<p>heroの行の更新ボタンを押してね！！</p>
+
+		<table border="1" style="border-collapse: collapse; margin:20px auto;">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>名前</th>
+					<th>敵か味方か</th>
+					<th>更新</th>
+				</tr>
+			</thead>
+			<tbody class="m_table-contents">
+				<tr th:each="characters : ${characterForm}">
+					<form th:action="@{/update_study02/{id}(id=*{characters.id})}">
+						<td align="center" th:text="*{characters.id}"></td>
+						<td align="center" th:text="*{characters.name}"></td>
+						<td align="center" th:text="*{characters.enemy_or_team}"></td>
+						<td>
+							<input type="submit" th:value="更新する">
+						</td>
+					</form>
+				</tr>
+			</tbody>
+		</table>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>

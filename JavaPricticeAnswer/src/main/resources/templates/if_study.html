@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>if文の練習</title>
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<header></header><!--ここは今回は使わないよ-->
+
+	<main>
+		<h3>問題.</h3>
+		<p>IfTrainingController.javaファイルの該当箇所を書き換えてね！<br></p>
+		<p>3を入力して、「３の倍数です！」と、</p>
+		<p>5を入力して、「５の倍数です！」と、</p>
+		<p>7を入力して、「３の倍数でも、５の倍数でもありません！」と表示されれば正解！</p>
+
+		<div style="border: 1px solid black;padding: 20px;">
+			<form th:action="@{/if_study_answer}" th:object="${if_answer}" method="post">
+				<h3>ここに数字を入力して、「答え合わせ」を押してね！</h3>
+				<input type="number" name="if_answer">
+				<input type="submit" value="答え合わせ">
+			</form>
+		</div>
+
+		<button onclick="location.href='index'">
+			<p>問題一覧に戻る</p>
+		</button>
+	</main>
+
+	<footer></footer><!--ここは今回は使わないよ-->
+</body>
+
+</html>
