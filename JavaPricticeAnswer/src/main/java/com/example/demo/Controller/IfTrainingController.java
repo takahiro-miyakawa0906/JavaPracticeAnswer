@@ -16,30 +16,38 @@ public class IfTrainingController {
 	JdbcTemplate jdbc;
 
 	@RequestMapping("/if_study")
-    public String if_study(Model model) {
-	
-    	return "if_study";
-    }
-	
+	public String if_study(Model model) {
+
+		return "if_study";
+	}
+
 	@RequestMapping("if_study_answer")
 	public String if_study_answer(@ModelAttribute IfStudyForm ifStudyForm, Model model) {
-		
+
 		String if_training;
+
 		
-			int if_answer = (int) ifStudyForm.getIf_answer();
-			if(if_answer%3==0) {
-				if_training = "3の倍数です";
-			}else if(if_answer%5==0) {
-				if_training = "５の倍数です";
-			}else {
-				if_training = "３の倍数でも、５の倍数でもありません";
-			}
-	
-			
+//		↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		
+		int if_answer = (int) ifStudyForm.getIf_answer();
+		if (if_answer % 3 == 0) {
+			if_training = "3の倍数です";
+		} else if (if_answer % 5 == 0) {
+			if_training = "５の倍数です";
+		} else {
+			if_training = "３の倍数でも、５の倍数でもありません";
+		}
+		
+		
+		
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+		
+		
+		
+		
+
 		model.addAttribute("if_training", if_training);
 		return "if_study_answer";
 	}
-	
-	
 
 }

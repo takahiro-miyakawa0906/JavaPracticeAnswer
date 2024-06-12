@@ -80,7 +80,24 @@ public class UpdateTrainingController {
 	@RequestMapping("update_study_answer")
 	public String update_study_answer(CharacterForm characterForm, Model model) {
 		
+		
+		
+//		↓↓↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		
+		
 		String sql_update = "UPDATE characters SET name=?, enemy_flg=? where id = ?";
+		
+		
+		
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+		
+		
+		
+		
+		
+		
+		
+		
     	jdbc.update(sql_update, characterForm.getName(), characterForm.getEnemy_flg(), characterForm.getId());
     	
     	String sql_select = "SELECT * FROM characters";

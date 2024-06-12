@@ -30,9 +30,18 @@ public class ForTrainingController {
 		List<Integer> for_answer_list = new ArrayList<>();
 
 		int for_answer = (int) forStudyForm.getFor_answer();
+		
+		
+//		↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓
+		
+		
 		for (int i = 1; i <= for_answer; i++) {
 			for_answer_list.add(i);
 		}
+		
+		
+		
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 		model.addAttribute("for_training", for_answer_list);
 		return "for_study_answer";

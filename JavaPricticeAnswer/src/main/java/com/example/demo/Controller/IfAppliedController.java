@@ -31,7 +31,18 @@ public class IfAppliedController {
 		List<Map<String, Object>> list = jdbc.queryForList(sql);
 		List<CharacterEntity> characterList = new ArrayList<CharacterEntity>();
 		for (Map<String, Object> user : list) {
+			
+			
+//		　　↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+			
 			if (user.get("enemy_flg").equals(0)) {
+				
+				
+//			↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+				
+				
+				
+				
 				CharacterEntity characterEntity = new CharacterEntity();
 				characterEntity.setId(Integer.parseInt(user.get("id").toString()));
 				characterEntity.setName((String) user.get("name"));

@@ -30,7 +30,18 @@ public class ForAppliedController {
 		String sql = "SELECT * FROM characters";
 		List<Map<String, Object>> list = jdbc.queryForList(sql);
 		List<CharacterEntity> characterList = new ArrayList<CharacterEntity>();
+		
+		
+//		↓↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		
 		for(Map<String, Object> user : list) {
+			
+			
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+			
+			
+			
+			
 			CharacterEntity characterEntity = new CharacterEntity();
 			characterEntity.setId(Integer.parseInt(user.get("id").toString()));
 			characterEntity.setName((String) user.get("name"));		

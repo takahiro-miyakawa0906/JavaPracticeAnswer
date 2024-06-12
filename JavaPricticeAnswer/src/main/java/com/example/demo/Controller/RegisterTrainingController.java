@@ -30,7 +30,20 @@ public class RegisterTrainingController {
 	@RequestMapping("/register_study_answer")
 	public String register_study(@ModelAttribute CharacterForm characterForm, Model model) {
 
+		
+//		↓↓↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		
+		
 		String sql_register = "INSERT INTO characters(id, name, enemy_flg) VALUES(" + null + ",?,?)";
+		
+		
+		
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+		
+		
+		
+		
+		
 		jdbc.update(sql_register, characterForm.getName(), characterForm.getEnemy_flg());
 		
 		String sql_select = "SELECT * FROM characters";

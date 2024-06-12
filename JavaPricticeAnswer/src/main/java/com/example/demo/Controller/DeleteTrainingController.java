@@ -45,7 +45,16 @@ public class DeleteTrainingController {
 	@RequestMapping("delete_study_answer/{id}")
 	public String getEdit(@PathVariable("id") int id, Model model) {
 		
+		
+//		↓↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		
 		String sql_delete = "DELETE FROM characters WHERE id = ?";
+		
+		
+//		↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+		
+		
+		
 		jdbc.update(sql_delete, id);
 		
 		String sql_select = "SELECT * FROM characters";
