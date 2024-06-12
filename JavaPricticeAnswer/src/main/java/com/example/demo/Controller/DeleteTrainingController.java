@@ -47,7 +47,7 @@ public class DeleteTrainingController {
 		
 		
 //		↓↓↓↓↓↓↓↓↓↓↓↓↓答え↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-		
+	
 		String sql_delete = "DELETE FROM characters WHERE id = ?";
 		
 		
